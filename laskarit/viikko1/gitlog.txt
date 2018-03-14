@@ -1,0 +1,74 @@
+commit 6c71fb1ccf80fda83a57b00b1f18ace5b28f7239
+Author: tviivi <viivi.tiihonen@helsinki.fi>
+Date:   Wed Mar 14 13:32:59 2018 +0200
+
+    muutoksia
+
+ eka.txt    | 1 +
+ kolmas.txt | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+commit 52034b4dc05b0662f0d46964c8328850000d60a1
+Author: tviivi <viivi.tiihonen@helsinki.fi>
+Date:   Wed Mar 14 13:28:18 2018 +0200
+
+    rename tiedosto.txt to eka.txt
+
+ eka.txt      | 0
+ tiedosto.txt | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 4d32b83a7d10d2b1fb811cec6309126ee83b6e59
+Author: tviivi <viivi.tiihonen@helsinki.fi>
+Date:   Wed Mar 14 13:26:28 2018 +0200
+
+    toinen.txt poisto
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 0a81e923675977e6101ccf78ef426a5f040c4ed7
+Author: tviivi <viivi.tiihonen@helsinki.fi>
+Date:   Wed Mar 14 13:21:50 2018 +0200
+
+    uusi kansio
+
+ stuff/stuffikansio.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 6903464a5a5380e056f29df57c882c8c34912e35
+Author: tviivi <viivi.tiihonen@helsinki.fi>
+Date:   Wed Mar 14 13:20:17 2018 +0200
+
+    muutoksia toinen.txt ja kolmas.txt
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit ba5113dd2d2079a406aa48945980911960949bbd
+Author: tviivi <viivi.tiihonen@helsinki.fi>
+Date:   Wed Mar 14 13:18:42 2018 +0200
+
+    uusi tiedosto
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 134ad6c56217de97954c2025a081588b1933e3d1
+Author: tviivi <viivi.tiihonen@helsinki.fi>
+Date:   Wed Mar 14 13:16:28 2018 +0200
+
+    muutos ja lisäys
+
+ toinen.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit dcf7e5dbc66648953aa0cf291eccb606df9081c7
+Author: tviivi <viivi.tiihonen@helsinki.fi>
+Date:   Wed Mar 14 13:06:40 2018 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
