@@ -1,7 +1,6 @@
 # OTM-harjoitustyö
 
-*tämä teksti tulee olemaan kursivoitu*
-tämän tekstin pitäisi olla täysin normaali
-**tämä teksti taas tulee olemaan boldattu**
 
-[GitHub](http://github.com)
+## VIIKKO1
+[gitlog.txt](https://github.com/tviivi/otm-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
+[komentorivi.txt](https://github.com/tviivi/otm-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
