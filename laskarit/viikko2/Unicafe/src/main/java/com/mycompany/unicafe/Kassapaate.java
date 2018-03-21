@@ -56,7 +56,8 @@ public class Kassapaate {
             kortti.lataaRahaa(summa);
             this.kassassaRahaa += summa;
         } else {
-            return;
+            kortti.lataaRahaa(0);
+            this.kassassaRahaa += 0;
         }
     }
 

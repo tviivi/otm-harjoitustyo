@@ -32,5 +32,4 @@ public class Maksukortti {
         int senttia = saldo%100;
         return "saldo: "+euroa+"."+senttia;
     } 
-    
 }
