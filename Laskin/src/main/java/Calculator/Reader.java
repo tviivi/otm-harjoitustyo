@@ -1,4 +1,4 @@
-package com.mycompany.laskin;
+package Calculator;
 
 import java.util.Scanner;
 public class Reader {

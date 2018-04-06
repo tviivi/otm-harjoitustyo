@@ -1,12 +1,12 @@
-package com.mycompany.laskin;
+package Calculator;
 
 import java.util.ArrayList;
 
-public class Calcutor {
+public class Calculator {
     private Reader reader;
     private ArrayList list;
     
-    public Calcutor() {
+    public Calculator() {
         reader = new Reader();
         list = new ArrayList();
     }

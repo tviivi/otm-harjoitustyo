@@ -1,10 +1,10 @@
-package Testi;
-import com.mycompany.laskin.Calcutor;
+package Test;
+import Calculator.Calculator;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class MainTest {
-    Calcutor laskin = new Calcutor();
+    Calculator laskin = new Calculator();
     
     @Test
     public void testi() {

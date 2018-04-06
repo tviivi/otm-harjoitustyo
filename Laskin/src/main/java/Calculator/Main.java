@@ -1,9 +1,9 @@
-package com.mycompany.laskin;
+package Calculator;
 
 public class Main {
 
     public static void main(String[] args) {
-        Calcutor calculator = new Calcutor();
+        Calculator calculator = new Calculator();
         calculator.start();
     }
 }
