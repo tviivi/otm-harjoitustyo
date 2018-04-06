@@ -1,4 +1,4 @@
-﻿# OTM-harjoitustyö
+﻿# OTM-harjoitustyö - Laskin
 
 Referenssisovellus kurssille Ohjelmistotekniikan menetelmät 2018 kevät.
 
