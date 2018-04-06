@@ -1,11 +1,8 @@
 ﻿# OTM-harjoitustyö
 
+Referenssisovellus kurssille Ohjelmistotekniikan menetelmät 2018 kevät.
 
-## VIIKKO1
-[gitlog.txt](https://github.com/tviivi/otm-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
-[komentorivi.txt](https://github.com/tviivi/otm-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
-
-**mielikuvituksellinen muutos**
-
-## VIIKKO2
-[dokumentointi](https://github.com/tviivi/otm-harjoitustyo/tree/master/dokumentointi)
+##Dokumentaatio
+[Yleiskuvaus](https://github.com/tviivi/otm-harjoitustyo/blob/master/dokumentointi/yleiskuvaus.md)
+[Toiminnallisuudet](https://github.com/tviivi/otm-harjoitustyo/blob/master/dokumentointi/toiminnallisuudet.md)
+[Tuntikirjanpito](https://github.com/tviivi/otm-harjoitustyo/blob/master/dokumentointi/tuntikirjanpito.md)
