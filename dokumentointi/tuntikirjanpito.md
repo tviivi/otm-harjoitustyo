@@ -6,5 +6,7 @@
 | 26.3. | 1 | vaatimusm‰‰rittely |
 | 6.4. | 0,5 | maven-projektin luominen |
 | 6.4. | 2 | sovellukseen hieman toiminnallisuutta ja README.md -refaktorointia |
+| 13.4. | 2,5 | sovellukseen lis‰‰ toiminnallisuutta ja testej‰ |
+| 13.4. | 0,5 | tuntikirjanpito, README.md -p‰ivitys, Checkstyle |
 
-## Yhteens‰ 3,5h
+## Yhteens‰ 7,5h
