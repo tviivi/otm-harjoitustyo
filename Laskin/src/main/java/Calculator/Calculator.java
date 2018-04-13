@@ -3,64 +3,94 @@ package Calculator;
 import java.util.ArrayList;
 
 public class Calculator {
+
     private Reader reader;
     private ArrayList list;
-    
+    private int mainvalue;
+
     public Calculator() {
         reader = new Reader();
         list = new ArrayList();
+        mainvalue = 0;
     }
 
     public void start() {
+        System.out.println("Syötä vuoronperään lukuja ja laskukomentoja, lopeta komennolla 'stop'.");
+        System.out.println("Syötä ensimmäinen luku");
+        int readersvalue = reader.readInteger();
+        System.out.println("Syötä ensimmäinen komento (+, -, *, /, ^)");
+        mainvalue += readersvalue;
         while (true) {
-            System.out.println("summa/erotus/tulo/lopeta:");
+
             String command = reader.readString();
-            if (command.equals("lopeta")) {
+
+            if (command.equals("+")) {
+                sum(reader.readInteger());
+            } else if (command.equals("-")) {
+                difference(reader.readInteger());
+            } else if (command.equals("*")) {
+                product(reader.readInteger());
+            } else if (command.equals("/")) {
+                divide(reader.readInteger());
+            } else if (command.equals("^")) {
+                power(reader.readInteger());
+            } else if (command.equals("stop")) {
+                System.out.println("Ohjelman suoritus lopetettu");
                 break;
-            }
-            if (command.equals("summa")) {
-                sum();
-            } else if (command.equals("erotus")) {
-                difference();
-            } else if (command.equals("tulo")) {
-                product();
+            } else {
+                System.out.println("Virheellinen komento, yritä uudelleen");
             }
         }
         statistics();
     }
-    
-    private void sum() {
-        System.out.print("Luku1: ");
-        int value1 = reader.readInteger();
-        System.out.print("Luku2: ");
-        int value2 = reader.readInteger();
-        int sum = value1 + value2;
-        System.out.println("Lukujen summa on " + sum);
-        list.add(value1 + "+" + value2 + "=" + sum);
+
+    public void sum(Integer anothervalue) {
+        int help = mainvalue;
+        mainvalue += anothervalue;
+        list.add(help + "+" + anothervalue + "=" + mainvalue);
     }
-    
-    private void difference() {
-        System.out.print("Luku1: ");
-        int value1 = reader.readInteger();
-        System.out.print("Luku2: ");
-        int value2 = reader.readInteger();
-        int difference = value1 - value2;
-        System.out.println("Lukujen erotus on " + difference);
-        list.add(value1 + "-" + value2 + "=" + difference);
+
+    public void difference(Integer anothervalue) {
+        int help = mainvalue;
+        mainvalue -= anothervalue;
+        list.add(help + "-" + anothervalue + "=" + mainvalue);
     }
-    
-    private void product() {
-        System.out.print("Luku1: ");
-        int value1 = reader.readInteger();
-        System.out.print("Luku2: ");
-        int value2 = reader.readInteger();
-        int product = value1 * value2;
-        System.out.println("Lukujen tulo on " + product);
-        list.add(value1 + "*" + value2 + "=" + product);
+
+    public void product(Integer anothervalue) {
+        int help = mainvalue;
+        mainvalue = mainvalue * anothervalue;
+        list.add(help + "*" + anothervalue + "=" + mainvalue);
     }
-    
+
+    public void divide(Integer anothervalue) {
+        int help = mainvalue;
+        mainvalue = mainvalue / anothervalue;
+        list.add(help + "/" + anothervalue + "=" + mainvalue);
+    }
+
+    public void power(Integer anothervalue) {
+        int help = mainvalue;
+        mainvalue = (int) Math.pow(mainvalue, anothervalue);
+        list.add(help + "^" + anothervalue + "=" + mainvalue);
+    }
+
     private void statistics() {
-        System.out.println("Historia:");
-        System.out.println(list);
+        System.out.print("Lopullinen tulos: " + mainvalue + "\n");
+        if (list.size() > 0) {
+            System.out.print("Laskuhistoria: ");
+            for (int i = 0; i < list.size(); i++) {
+                System.out.print(list.get(i) + " ");
+            }
+        } else {
+            System.out.println("Ei laskuhistoriaa");
+        }  
+    }
+
+    public void setMainvalue(int mainvalue) {
+        this.mainvalue = mainvalue;
+    }
+
+    public int getMainvalue() {
+        return mainvalue;
     }
 }
