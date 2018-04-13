@@ -16,4 +16,3 @@ public class Reader {
         return Integer.parseInt(reader.nextLine());
     }
 }
-
