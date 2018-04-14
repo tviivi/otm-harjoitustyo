@@ -1,0 +1,1 @@
+![alt text](kuvat/arkkitehtuuri.png "Description goes here")
