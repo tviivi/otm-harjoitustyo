@@ -6,7 +6,7 @@ Referenssisovellus kurssille Ohjelmistotekniikan menetelmät 2018 kevät. Toteut
 [Yleiskuvaus](https://github.com/tviivi/otm-harjoitustyo/blob/master/dokumentointi/yleiskuvaus.md) <br />
 [Toiminnallisuudet](https://github.com/tviivi/otm-harjoitustyo/blob/master/dokumentointi/toiminnallisuudet.md) <br />
 [Tuntikirjanpito](https://github.com/tviivi/otm-harjoitustyo/blob/master/dokumentointi/tuntikirjanpito.md) <br />
-[Arkkitehtuuri](https://github.com/tviivi/otm-harjoitustyo/blob/master/dokumentointi/arkkitehtuuri.png) <br />
+[Arkkitehtuuri](https://github.com/tviivi/otm-harjoitustyo/blob/master/dokumentointi/arkkitehtuuri.md) <br />
 
 ## Release
 Viikon 5 deadlinen mukainen release löytyy [täältä](https://github.com/tviivi/otm-harjoitustyo/releases/tag/viikko5)
