@@ -18,7 +18,8 @@ public class Calculator {
         System.out.println("Syötä vuoronperään lukuja ja laskukomentoja, lopeta komennolla 'stop'");
         System.out.println("Syötä ensimmäinen luku");
         int readersvalue = reader.readInteger();
-        System.out.println("Syötä ensimmäinen komento (+, -, *, /, ^)");
+        System.out.println("Syötä ensimmäinen komento");
+        System.out.println("Käytettävissä olevat komennot: +, -, *, /, ^");
         mainvalue += readersvalue;
         while (true) {
             String command = reader.readString();

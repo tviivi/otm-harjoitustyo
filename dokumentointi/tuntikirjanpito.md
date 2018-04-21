@@ -10,5 +10,6 @@
 | 13.4. | 1,5 | tuntikirjanpito, README.md -päivitys, Checkstyle, luokkakaavio |
 | 21.4. | 1 | jar ja release, README.md päivitys |
 | 21.4. | 1 | sekvenssikaavio, README.md lyhyt kuvaus |
+| 21.4. | 1 | graafisen käyttöliittymän opiskelua |
 
-## Yhteensä 10,5h
+## Yhteensä 11,5h
