@@ -17,4 +17,8 @@ Testit suoritetaan komennolla `mvn test`
 ja testien kattavuusraportti komennolla `mvn jacoco:report`
 
 ### Checkstyle
-Checkstylen määrittelemät tarkistukset ajetaan komennolla `mvn jxr:jxr checkstyle:checkstyle`
+Checkstylen määrittelemät tarkistukset ajetaan komennolla `mvn jxr:jxr checkstyle:checkstyle` <br />
+Mahdolliset virheilmoitukset selviävät avaamalla selaimella tiedosto target/site/checkstyle.html
+
+### Jar
+Jar suoritetaan komennolla `mvn package` ja suoritettu generoi hakemistoon target suoritettavan jar-tiedoston Laskin-1.0-SNAPSHOT.jar
