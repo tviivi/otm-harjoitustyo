@@ -8,5 +8,6 @@
 | 6.4. | 2 | sovellukseen hieman toiminnallisuutta ja README.md -refaktorointia |
 | 13.4. | 2,5 | sovellukseen lis‰‰ toiminnallisuutta ja testej‰ |
 | 13.4. | 1,5 | tuntikirjanpito, README.md -p‰ivitys, Checkstyle, luokkakaavio |
+| 21.4. | 1 | jar ja release, README.md p‰ivitys |
 
-## Yhteens‰ 8,5h
+## Yhteens‰ 9,5h

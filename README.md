@@ -8,6 +8,9 @@ Referenssisovellus kurssille Ohjelmistotekniikan menetelmät 2018 kevät.
 [Tuntikirjanpito](https://github.com/tviivi/otm-harjoitustyo/blob/master/dokumentointi/tuntikirjanpito.md) <br />
 [Arkkitehtuuri](https://github.com/tviivi/otm-harjoitustyo/blob/master/dokumentointi/arkkitehtuuri.png) <br />
 
+## Release
+Viikon 5 deadlinen mukainen release löytyy [täältä](https://github.com/tviivi/otm-harjoitustyo/releases/tag/viikko5)
+
 ## Komentorivitoiminnot
 ### Testaus
 Testit suoritetaan komennolla `mvn test`

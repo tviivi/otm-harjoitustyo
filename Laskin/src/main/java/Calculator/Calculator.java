@@ -15,13 +15,12 @@ public class Calculator {
     }
 
     public void start() {
-        System.out.println("Syötä vuoronperään lukuja ja laskukomentoja, lopeta komennolla 'stop'.");
+        System.out.println("Syötä vuoronperään lukuja ja laskukomentoja, lopeta komennolla 'stop'");
         System.out.println("Syötä ensimmäinen luku");
         int readersvalue = reader.readInteger();
         System.out.println("Syötä ensimmäinen komento (+, -, *, /, ^)");
         mainvalue += readersvalue;
         while (true) {
-
             String command = reader.readString();
 
             if (command.equals("+")) {
