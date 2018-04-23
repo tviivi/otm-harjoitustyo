@@ -74,7 +74,7 @@ public class Calculator {
         list.add(help + "^" + anothervalue + "=" + mainvalue);
     }
 
-    private void statistics() {
+    public void statistics() {
         System.out.print("Lopullinen tulos: " + mainvalue + "\n");
         if (list.size() > 0) {
             System.out.print("Laskuhistoria: ");

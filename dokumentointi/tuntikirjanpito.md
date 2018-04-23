@@ -11,5 +11,6 @@
 | 21.4. | 1 | jar ja release, README.md päivitys |
 | 21.4. | 1 | sekvenssikaavio, README.md lyhyt kuvaus |
 | 21.4. | 1 | graafisen käyttöliittymän opiskelua |
+| 23.4. | 3 | graafisen käyttöliittymän raaka ensimmäinen versio | 
 
-## Yhteensä 10,5h
+## Yhteensä 13,5h
