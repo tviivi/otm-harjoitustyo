@@ -19,7 +19,7 @@ public class Graphic extends Application {
     @Override
     public void start(Stage window) throws Exception {
 
-        Canvas canvas = new Canvas(400, 400);
+        Canvas canvas = new Canvas(1000, 1000);
         TextField current = new TextField();
         TextField summary = new TextField();
         TextField calculation = new TextField();

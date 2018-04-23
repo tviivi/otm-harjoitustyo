@@ -19,5 +19,4 @@ public class ButtonListener {
         thenumber = thenumber * 10 + buttonNumber;
         current.setText("" + thenumber);
     }
-
 }
