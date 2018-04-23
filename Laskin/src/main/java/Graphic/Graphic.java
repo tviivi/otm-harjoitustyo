@@ -6,7 +6,6 @@ import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
@@ -21,7 +20,6 @@ public class Graphic extends Application {
     public void start(Stage window) throws Exception {
 
         Canvas canvas = new Canvas(400, 400);
-        BorderPane setup = new BorderPane();
         TextField current = new TextField();
         TextField summary = new TextField();
         TextField calculation = new TextField();
