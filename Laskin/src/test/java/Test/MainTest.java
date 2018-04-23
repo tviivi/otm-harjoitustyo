@@ -7,12 +7,10 @@ import org.junit.Test;
 public class MainTest {
 
     Calculator calculator;
-    Reader reader;
     
     @Before
     public void setUp() {
         calculator = new Calculator();
-        reader = new Reader();
         calculator.setMainvalue(0);
     }
 

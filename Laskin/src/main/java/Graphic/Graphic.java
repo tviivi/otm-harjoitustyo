@@ -36,17 +36,46 @@ public class Graphic extends Application {
             current.setText("" + thenumber);
         });
         Button number3 = new Button("3");
-       /// number3.setOnAction(new Napinkasittelija(current, 3, thenumber));
-        
+        //number3.setOnAction((event) -> new ButtonListener(current, 3, thenumber));
+        number3.setOnAction((event) -> {
+            thenumber = thenumber*10+3;
+            current.setText("" + thenumber);
+        });
         Button number4 = new Button("4");
+        number4.setOnAction((event) -> {
+            thenumber = thenumber*10+4;
+            current.setText("" + thenumber);
+        });
         Button number5 = new Button("5");
+        number5.setOnAction((event) -> {
+            thenumber = thenumber*10+5;
+            current.setText("" + thenumber);
+        });
         Button number6 = new Button("6");
+        number6.setOnAction((event) -> {
+            thenumber = thenumber*10+6;
+            current.setText("" + thenumber);
+        });
         Button number7 = new Button("7");
+        number7.setOnAction((event) -> {
+            thenumber = thenumber*10+7;
+            current.setText("" + thenumber);
+        });
         Button number8 = new Button("8");
+        number8.setOnAction((event) -> {
+            thenumber = thenumber*10+8;
+            current.setText("" + thenumber);
+        });
         Button number9 = new Button("9");
+        number9.setOnAction((event) -> {
+            thenumber = thenumber*10+9;
+            current.setText("" + thenumber);
+        });
         Button number0 = new Button("0");
-        Button empty1 = new Button("  ");
-        Button empty2 = new Button("  ");
+        number0.setOnAction((event) -> {
+            thenumber = thenumber*10;
+            current.setText("" + thenumber);
+        });
         Button sum = new Button("+");
         sum.setOnAction((event) -> {
             int help = calculator.getMainvalue();
@@ -56,9 +85,37 @@ public class Graphic extends Application {
             summary.setText("= " + calculator.getMainvalue());
         });
         Button difference = new Button("-");
+        difference.setOnAction((event) -> {
+            int help = calculator.getMainvalue();
+            calculator.difference(thenumber);
+            thenumber = 0;
+            calculation.setText(help + "-" + current.getText());
+            summary.setText("= " + calculator.getMainvalue());
+        });
         Button product = new Button("*");
+        product.setOnAction((event) -> {
+            int help = calculator.getMainvalue();
+            calculator.product(thenumber);
+            thenumber = 0;
+            calculation.setText(help + "*" + current.getText());
+            summary.setText("= " + calculator.getMainvalue());
+        });
         Button divide = new Button("/");
+        divide.setOnAction((event) -> {
+            int help = calculator.getMainvalue();
+            calculator.divide(thenumber);
+            thenumber = 0;
+            calculation.setText(help + "/" + current.getText());
+            summary.setText("= " + calculator.getMainvalue());
+        });
         Button power = new Button("^");
+        power.setOnAction((event) -> {
+            int help = calculator.getMainvalue();
+            calculator.power(thenumber);
+            thenumber = 0;
+            calculation.setText(help + "^" + current.getText());
+            summary.setText("= " + calculator.getMainvalue());
+        });
         
         HBox first = new HBox();
         HBox second = new HBox();
@@ -66,11 +123,11 @@ public class Graphic extends Application {
         HBox fourth = new HBox();
         HBox fifth = new HBox();
         
-        first.getChildren().addAll(empty1, number0, empty2, summary);
+        first.getChildren().addAll(sum, number0, difference, summary);
         second.getChildren().addAll(number1, number2, number3, calculation);
         third.getChildren().addAll(number4, number5, number6);
         fourth.getChildren().addAll(number7, number8, number9, current);
-        fifth.getChildren().addAll(sum);
+        fifth.getChildren().addAll(product, divide, power);
         
         VBox finale = new VBox();
         finale.getChildren().addAll(fourth, third, second, first, fifth);
