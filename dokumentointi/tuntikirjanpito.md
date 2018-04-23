@@ -12,4 +12,4 @@
 | 21.4. | 1 | sekvenssikaavio, README.md lyhyt kuvaus |
 | 21.4. | 1 | graafisen käyttöliittymän opiskelua |
 
-## Yhteensä 11,5h
+## Yhteensä 10,5h
