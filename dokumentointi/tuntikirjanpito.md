@@ -13,5 +13,6 @@
 | 21.4. | 1 | graafisen käyttöliittymän opiskelua |
 | 23.4. | 3 | graafisen käyttöliittymän raaka ensimmäinen versio |
 | 23.4. | 0,5 | uusi release, käyttöliittymän deadlinen mukainen vesio |
+| 23.4. | 0,5 | viikon 5 deadlinea varten viimeistelyä |
 
-## Yhteensä 14h
+## Yhteensä 14,5h
