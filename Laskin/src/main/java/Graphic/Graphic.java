@@ -25,6 +25,8 @@ public class Graphic extends Application {
         TextField calculation = new TextField();
 
         Button number1 = new Button("1");
+        //Tässä tarkoitus vähentää copy-pastea käyttämällä ButtonListener -luokkaa seuraavaan tapaan
+        //number1.setOnAction((event) -> new ButtonListener(current, 1, thenumber));
         number1.setOnAction((event) -> {
             thenumber = thenumber * 10 + 1;
             current.setText("" + thenumber);
@@ -35,7 +37,6 @@ public class Graphic extends Application {
             current.setText("" + thenumber);
         });
         Button number3 = new Button("3");
-        //number3.setOnAction((event) -> new ButtonListener(current, 3, thenumber));
         number3.setOnAction((event) -> {
             thenumber = thenumber * 10 + 3;
             current.setText("" + thenumber);

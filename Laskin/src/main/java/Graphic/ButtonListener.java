@@ -4,6 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TextField;
 
 public class ButtonListener {
+    
+    //Tämä luokka ei vielä käytössä
 
     TextField current;
     int buttonNumber;
