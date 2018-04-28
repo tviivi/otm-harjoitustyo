@@ -14,5 +14,7 @@
 | 23.4. | 3 | graafisen käyttöliittymän raaka ensimmäinen versio |
 | 23.4. | 0,5 | uusi release, käyttöliittymän deadlinen mukainen vesio |
 | 23.4. | 1 | viikon 5 deadlinea varten viimeistelyä, uusi sekvenssikaavio |
+| 28.4. | 1 | koodikatselmointi |
+| 28.4. | 0,5 | kurssisivuilla surffailua, JavaFX-opiskelua (tuloksetta), koodin siistimistä |
 
-## Yhteensä 15h
+## Yhteensä 16,5h

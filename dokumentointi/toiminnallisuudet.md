@@ -9,8 +9,7 @@
 
 ## Kirjautumisen jälkeen
 - käyttäjä näkee laskimen ja ohjeistuksen sen sisältämään toiminnallisuuteen
-- käyttäjä voi syöttää laskimeen jonkin numeerisen lausekkeen, jonka laskin laskee
-  - mikäli laskutoimitus on virheellinen, seuraa error-viesti
+- käyttäjä voi syöttää laskimeen vuoronperään numeroita ja laskutoimituskomentoja, jotka laskin laskee täsmällisesti oikein
 - käyttäjä näkee syöttämiensä laskujen historian
 - käyttäjä voi kirjautua ulos järjestelmästä
 
