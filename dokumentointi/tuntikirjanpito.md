@@ -16,5 +16,6 @@
 | 23.4. | 1 | viikon 5 deadlinea varten viimeistelyä, uusi sekvenssikaavio |
 | 28.4. | 1 | koodikatselmointi |
 | 28.4. | 0,5 | kurssisivuilla surffailua, JavaFX-opiskelua (tuloksetta), koodin siistimistä |
+| 2.5. | 2 | koodin siistimistä, käyttöliittymän muovailua |
 
-## Yhteensä 16,5h
+## Yhteensä 18,5h

@@ -4,8 +4,6 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TextField;
 
 public class ButtonListener {
-    
-    //Tämä luokka ei vielä käytössä
 
     TextField current;
     int buttonNumber;
@@ -17,8 +15,12 @@ public class ButtonListener {
         this.thenumber = thenumber;
     }
 
-    void handle(ActionEvent event) {
+    public int handle(ActionEvent event) {
+        System.out.println("testi");
         thenumber = thenumber * 10 + buttonNumber;
+        System.out.println("testi2");
         current.setText("" + thenumber);
+        System.out.println("testi3");
+        return (thenumber);
     }
 }

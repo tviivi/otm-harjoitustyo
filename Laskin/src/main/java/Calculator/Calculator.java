@@ -8,22 +8,18 @@ public class Calculator {
     }
 
     public void sum(Integer anothervalue) {
-        int help = mainvalue;
         mainvalue += anothervalue;
     }
 
     public void difference(Integer anothervalue) {
-        int help = mainvalue;
         mainvalue -= anothervalue;
     }
 
     public void product(Integer anothervalue) {
-        int help = mainvalue;
         mainvalue = mainvalue * anothervalue;
     }
 
     public void divide(Integer anothervalue) {
-        int help = mainvalue;
         mainvalue = mainvalue / anothervalue;
     }
 

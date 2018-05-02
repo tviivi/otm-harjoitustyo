@@ -3,30 +3,30 @@ package Graphic;
 import Calculator.Calculator;
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.canvas.Canvas;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-
 import javafx.stage.Stage;
 
 public class Graphic extends Application {
 
-    int thenumber;
-    Calculator calculator = new Calculator();
+    private int thenumber;
+    private Calculator calculator = new Calculator();
 
     @Override
     public void start(Stage window) throws Exception {
-
-        Canvas canvas = new Canvas(1000, 1000);
+        
         TextField current = new TextField();
+        current.setPrefWidth(30);
         TextField summary = new TextField();
+        summary.setPrefWidth(50);
         TextField calculation = new TextField();
+        calculation.setPrefWidth(50);
+        TextField text = new TextField("tähän tulee ohjetekstiä");
+        text.setPrefSize(200, 50);
 
         Button number1 = new Button("1");
-        //Tässä tarkoitus vähentää copy-pastea käyttämällä ButtonListener -luokkaa seuraavaan tapaan
-        //number1.setOnAction((event) -> new ButtonListener(current, 1, thenumber));
         number1.setOnAction((event) -> {
             thenumber = thenumber * 10 + 1;
             current.setText("" + thenumber);
@@ -116,21 +116,33 @@ public class Graphic extends Application {
             calculation.setText(help + "^" + current.getText());
             summary.setText("= " + calculator.getMainvalue());
         });
+        Button getZero = new Button("Nollaa kaikki");
+        getZero.setOnAction((event) -> {
+            thenumber = 0;
+            calculator.setMainvalue(0);
+            calculation.setText("" + calculator.getMainvalue());
+            summary.setText("= " + thenumber);
+            current.setText("" + calculator.getMainvalue());
+        });
 
+        HBox textBox = new HBox();
         HBox first = new HBox();
         HBox second = new HBox();
         HBox third = new HBox();
         HBox fourth = new HBox();
         HBox fifth = new HBox();
+        HBox sixth = new HBox();
 
+        textBox.getChildren().addAll(text);
         first.getChildren().addAll(sum, number0, difference, summary);
         second.getChildren().addAll(number1, number2, number3, calculation);
         third.getChildren().addAll(number4, number5, number6);
         fourth.getChildren().addAll(number7, number8, number9, current);
         fifth.getChildren().addAll(product, divide, power);
+        sixth.getChildren().addAll(getZero);
 
         VBox finale = new VBox();
-        finale.getChildren().addAll(fourth, third, second, first, fifth);
+        finale.getChildren().addAll(textBox, fourth, third, second, first, fifth, sixth);
 
         Scene buttons = new Scene(finale);
 
