@@ -8,7 +8,7 @@ Ohjelma voidaan käynnistää klikkaamalla latauspalkkiin ilmestyvää kuvaketta tai 
 
 ## Ohjelman käyttäminen
 Ohjelman käynnistyttyä aukeaa graafinen liittymä, josta löytyy laskimen alustavat käyttöohjeet.
-![alt text](kuvat/aloitus.png "Description goes here")
+![alt text](kuvat/aloitus2.png "Description goes here")
 
-![alt text](kuvat/esimerkkilasku.png "Description goes here")
+![alt text](kuvat/esimerkkilasku2.png "Description goes here")
 Laskimen oikeaan yläreunaan tulostuu valittu numero, sen alapuolelle haluttu laskutoimitus ja lopulta tulos. Alareunaan tulostuu laskuhistoria, minkä voi nollata *Nollaa kaikki*-nappulalla. Laskimella voidaan laskea vain kokonaislukuja.
