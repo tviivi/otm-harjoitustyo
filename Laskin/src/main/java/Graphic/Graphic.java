@@ -1,9 +1,12 @@
 package Graphic;
 
 import Calculator.Calculator;
+import java.util.ArrayList;
+import java.util.List;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -13,6 +16,7 @@ public class Graphic extends Application {
 
     private int thenumber;
     private Calculator calculator = new Calculator();
+    private List historylist = new ArrayList();
 
     @Override
     public void start(Stage window) throws Exception {
@@ -23,8 +27,8 @@ public class Graphic extends Application {
         summary.setPrefWidth(50);
         TextField calculation = new TextField();
         calculation.setPrefWidth(50);
-        TextField text = new TextField("tähän tulee ohjetekstiä");
-        text.setPrefSize(200, 50);
+        Label text = new Label("tähän tulee ohjetekstiä");
+        Label history = new Label();
 
         Button number1 = new Button("1");
         number1.setOnAction((event) -> {
@@ -82,7 +86,9 @@ public class Graphic extends Application {
             calculator.sum(thenumber);
             thenumber = 0;
             calculation.setText(help + "+" + current.getText());
-            summary.setText("= " + calculator.getMainvalue());
+            summary.setText("=" + calculator.getMainvalue());
+            historylist.add("" + calculation.getText() + summary.getText());
+            history.setText(historylist.toString());
         });
         Button difference = new Button("-");
         difference.setOnAction((event) -> {
@@ -90,7 +96,9 @@ public class Graphic extends Application {
             calculator.difference(thenumber);
             thenumber = 0;
             calculation.setText(help + "-" + current.getText());
-            summary.setText("= " + calculator.getMainvalue());
+            summary.setText("=" + calculator.getMainvalue());
+            historylist.add("" + calculation.getText() + summary.getText());
+            history.setText(historylist.toString());
         });
         Button product = new Button("*");
         product.setOnAction((event) -> {
@@ -98,7 +106,9 @@ public class Graphic extends Application {
             calculator.product(thenumber);
             thenumber = 0;
             calculation.setText(help + "*" + current.getText());
-            summary.setText("= " + calculator.getMainvalue());
+            summary.setText("=" + calculator.getMainvalue());
+            historylist.add("" + calculation.getText() + summary.getText());
+            history.setText(historylist.toString());
         });
         Button divide = new Button("/");
         divide.setOnAction((event) -> {
@@ -106,7 +116,9 @@ public class Graphic extends Application {
             calculator.divide(thenumber);
             thenumber = 0;
             calculation.setText(help + "/" + current.getText());
-            summary.setText("= " + calculator.getMainvalue());
+            summary.setText("=" + calculator.getMainvalue());
+            historylist.add("" + calculation.getText() + summary.getText());
+            history.setText(historylist.toString());
         });
         Button power = new Button("^");
         power.setOnAction((event) -> {
@@ -114,7 +126,9 @@ public class Graphic extends Application {
             calculator.power(thenumber);
             thenumber = 0;
             calculation.setText(help + "^" + current.getText());
-            summary.setText("= " + calculator.getMainvalue());
+            summary.setText("=" + calculator.getMainvalue());
+            historylist.add("" + calculation.getText() + summary.getText());
+            history.setText(historylist.toString());
         });
         Button getZero = new Button("Nollaa kaikki");
         getZero.setOnAction((event) -> {
@@ -123,8 +137,10 @@ public class Graphic extends Application {
             calculation.setText("" + calculator.getMainvalue());
             summary.setText("= " + thenumber);
             current.setText("" + calculator.getMainvalue());
+            history.setText("Nollasit tapahtumat");
         });
 
+        HBox historyBox = new HBox();
         HBox textBox = new HBox();
         HBox first = new HBox();
         HBox second = new HBox();
@@ -140,9 +156,10 @@ public class Graphic extends Application {
         fourth.getChildren().addAll(number7, number8, number9, current);
         fifth.getChildren().addAll(product, divide, power);
         sixth.getChildren().addAll(getZero);
+        historyBox.getChildren().addAll(history);
 
         VBox finale = new VBox();
-        finale.getChildren().addAll(textBox, fourth, third, second, first, fifth, sixth);
+        finale.getChildren().addAll(textBox, fourth, third, second, first, fifth, sixth, historyBox);
 
         Scene buttons = new Scene(finale);
 

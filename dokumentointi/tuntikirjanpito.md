@@ -17,5 +17,6 @@
 | 28.4. | 1 | koodikatselmointi |
 | 28.4. | 0,5 | kurssisivuilla surffailua, JavaFX-opiskelua (tuloksetta), koodin siistimistä |
 | 2.5. | 2 | koodin siistimistä, käyttöliittymän muovailua |
+| 2.5. | 1 | historian toteuttaminen, pari testiä lisää |
 
-## Yhteensä 18,5h
+## Yhteensä 19,5h

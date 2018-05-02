@@ -18,6 +18,12 @@ public class MainTest {
     public void mainValueTest() {
         assertEquals(calculator.getMainvalue(), 0);
     }
+    
+    @Test
+    public void anotherMainValueTest() {
+        calculator.setMainvalue(2);
+        assertEquals(calculator.getMainvalue(), 2);
+    }
 
     @Test
     public void sumTest() {
@@ -29,6 +35,13 @@ public class MainTest {
     public void differenceTest() {
         calculator.difference(5);
         assertEquals(calculator.getMainvalue(), -5);
+    }
+    
+    @Test
+    public void secondDifferenceTest() {
+        calculator.setMainvalue(2);
+        calculator.difference(0);
+        assertEquals(calculator.getMainvalue(), 2);
     }
     
     @Test

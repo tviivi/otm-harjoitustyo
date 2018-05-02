@@ -1,6 +1,7 @@
 package Calculator;
 
 public class Calculator {
+
     private int mainvalue;
 
     public Calculator() {
@@ -20,7 +21,9 @@ public class Calculator {
     }
 
     public void divide(Integer anothervalue) {
-        mainvalue = mainvalue / anothervalue;
+        if (anothervalue != 0) {
+            mainvalue = mainvalue / anothervalue;
+        }
     }
 
     public void power(Integer anothervalue) {
