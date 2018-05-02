@@ -1,6 +1,6 @@
 ﻿# OTM-harjoitustyö - Laskin
 
-Referenssisovellus kurssille Ohjelmistotekniikan menetelmät 2018 kevät. Toteutettu laskinsvellus pystyy laskemaan yksinkertaisia laskuja kysymällä käyttäjältä aina yhden luvun ja laskutoimituksen kerrallaan. Sovellukseen on tulossa vielä kirjautumismahdollisuus.
+Referenssisovellus kurssille Ohjelmistotekniikan menetelmät 2018 kevät. Toteutettu laskinsvellus pystyy laskemaan yksinkertaisia laskuja kysymällä käyttäjältä aina yhden luvun ja laskutoimituksen kerrallaan. Sovellukseen on mahdollisesti tulossa vielä kirjautumismahdollisuus.
 
 ## Dokumentaatio
 [Yleiskuvaus](https://github.com/tviivi/otm-harjoitustyo/blob/master/dokumentointi/yleiskuvaus.md) <br />
@@ -10,6 +10,7 @@ Referenssisovellus kurssille Ohjelmistotekniikan menetelmät 2018 kevät. Toteut
 
 ## Release
 Viikon 5 deadlinen mukainen release löytyy [täältä](https://github.com/tviivi/otm-harjoitustyo/releases/tag/viikko5) <br />
+Viikon 6 deadlinen mukainen release löytyy [täältä](https://github.com/tviivi/otm-harjoitustyo/releases/tag/viikko6)
 
 ## Komentorivitoiminnot
 ### Testaus
