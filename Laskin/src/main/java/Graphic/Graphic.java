@@ -11,12 +11,13 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 
 public class Graphic extends Application {
 
     private int thenumber;
     private Calculator calculator = new Calculator();
-    private List historylist = new ArrayList();
+    List historylist = new ArrayList();
 
     @Override
     public void start(Stage window) throws Exception {
@@ -27,7 +28,7 @@ public class Graphic extends Application {
         summary.setPrefWidth(50);
         TextField calculation = new TextField();
         calculation.setPrefWidth(50);
-        Label text = new Label("tähän tulee ohjetekstiä");
+        Label text = new Label("Tervetuloa taskulaskin-sovellukseen! \n Aloita laskeminen painamalla jotain \n numeronäppäintä ja haluamaasi \n laskutoimitusnäppäintä. \n Jatka näitä vuoronperään.");
         Label history = new Label();
 
         Button number1 = new Button("1");
