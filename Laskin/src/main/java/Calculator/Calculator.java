@@ -1,11 +1,18 @@
 package Calculator;
 
+import Database.*;
+
 public class Calculator {
 
     private int mainvalue;
+    private Database database;
+    private HistoryDao history;
+    
 
     public Calculator() {
         mainvalue = 0;
+        this.database = new Database("jdbc:sqlite:History.db");
+        this.history = new HistoryDao(this.database);
     }
 
     public void sum(Integer anothervalue) {
@@ -37,5 +44,9 @@ public class Calculator {
 
     public int getMainvalue() {
         return mainvalue;
+    }
+    
+    public HistoryDao getHistory() {
+        return history;
     }
 }

@@ -19,5 +19,6 @@
 | 2.5. | 2 | koodin siistimistä, käyttöliittymän muovailua |
 | 2.5. | 1 | historian toteuttaminen, pari testiä lisää |
 | 2.5. | 1,5 | käyttöohje ja toiminnallisuutta kuvaava sekvenssikaavio |
+| 3.5. | 2 | tietokannan alustus, uusi pakkauskaavio |
 
-## Yhteensä 21h
+## Yhteensä 23h

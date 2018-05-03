@@ -1,8 +1,12 @@
 package Graphic;
 
 import Calculator.Calculator;
+import Database.Operation;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -11,7 +15,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 
 public class Graphic extends Application {
 
@@ -21,7 +24,7 @@ public class Graphic extends Application {
 
     @Override
     public void start(Stage window) throws Exception {
-        
+
         TextField current = new TextField();
         current.setPrefWidth(30);
         TextField summary = new TextField();
@@ -85,51 +88,41 @@ public class Graphic extends Application {
         sum.setOnAction((event) -> {
             int help = calculator.getMainvalue();
             calculator.sum(thenumber);
-            thenumber = 0;
             calculation.setText(help + "+" + current.getText());
-            summary.setText("=" + calculator.getMainvalue());
-            historylist.add("" + calculation.getText() + summary.getText());
-            history.setText(historylist.toString());
+            textFieldHelper(calculation, summary, history);
+            databaseHelper(calculation, summary);
         });
         Button difference = new Button("-");
         difference.setOnAction((event) -> {
             int help = calculator.getMainvalue();
             calculator.difference(thenumber);
-            thenumber = 0;
             calculation.setText(help + "-" + current.getText());
-            summary.setText("=" + calculator.getMainvalue());
-            historylist.add("" + calculation.getText() + summary.getText());
-            history.setText(historylist.toString());
+            textFieldHelper(calculation, summary, history);
+            databaseHelper(calculation, summary);
         });
         Button product = new Button("*");
         product.setOnAction((event) -> {
             int help = calculator.getMainvalue();
             calculator.product(thenumber);
-            thenumber = 0;
             calculation.setText(help + "*" + current.getText());
-            summary.setText("=" + calculator.getMainvalue());
-            historylist.add("" + calculation.getText() + summary.getText());
-            history.setText(historylist.toString());
+            textFieldHelper(calculation, summary, history);
+            databaseHelper(calculation, summary);
         });
         Button divide = new Button("/");
         divide.setOnAction((event) -> {
             int help = calculator.getMainvalue();
             calculator.divide(thenumber);
-            thenumber = 0;
             calculation.setText(help + "/" + current.getText());
-            summary.setText("=" + calculator.getMainvalue());
-            historylist.add("" + calculation.getText() + summary.getText());
-            history.setText(historylist.toString());
+            textFieldHelper(calculation, summary, history);
+            databaseHelper(calculation, summary);
         });
         Button power = new Button("^");
         power.setOnAction((event) -> {
             int help = calculator.getMainvalue();
             calculator.power(thenumber);
-            thenumber = 0;
             calculation.setText(help + "^" + current.getText());
-            summary.setText("=" + calculator.getMainvalue());
-            historylist.add("" + calculation.getText() + summary.getText());
-            history.setText(historylist.toString());
+            textFieldHelper(calculation, summary, history);
+            databaseHelper(calculation, summary);
         });
         Button getZero = new Button("Nollaa kaikki");
         getZero.setOnAction((event) -> {
@@ -166,6 +159,22 @@ public class Graphic extends Application {
 
         window.setScene(buttons);
         window.show();
+    }
+
+    public void databaseHelper(TextField calculation, TextField summary) {
+        Operation operation = new Operation("" + calculation.getText() + summary.getText());
+        try {
+            calculator.getHistory().saveOrUpdate(operation);
+        } catch (SQLException ex) {
+            Logger.getLogger(Graphic.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void textFieldHelper(TextField calculation, TextField summary, Label history) {
+        thenumber = 0;
+        summary.setText("=" + calculator.getMainvalue());
+        historylist.add("" + calculation.getText() + summary.getText());
+        history.setText(historylist.toString());
     }
 
     public static void main(String[] args) {
