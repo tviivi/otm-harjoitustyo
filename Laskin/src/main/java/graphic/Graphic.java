@@ -1,7 +1,7 @@
-package Graphic;
+package graphic;
 
-import Calculator.Calculator;
-import Database.Operation;
+import calculator.Calculator;
+import database.Operation;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,7 @@
-package Calculator;
+package calculator;
 
-import Database.*;
+import database.Database;
+import database.HistoryDao;
 
 public class Calculator {
 

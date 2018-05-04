@@ -20,5 +20,6 @@
 | 2.5. | 1 | historian toteuttaminen, pari testiä lisää |
 | 2.5. | 1,5 | käyttöohje ja toiminnallisuutta kuvaava sekvenssikaavio |
 | 3.5. | 2 | tietokannan alustus, uusi pakkauskaavio |
+| 4.5. | 1 | tietokantaluokkien siivous, pakkauskaavion päivitys, lisää testejä |
 
-## Yhteensä 23h
+## Yhteensä 24h

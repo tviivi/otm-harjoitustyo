@@ -1,4 +1,4 @@
-package Database;
+package database;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -12,21 +12,17 @@ public class Database {
         this.database = database;
         this.init();
     }
-    /**
-     * Gets connection to database.
-     * @return Connection
-     * @throws SQLException 
-     */
+    
+    // Gets connection to database
     public Connection getConnection() throws SQLException {
         String dbUrl = System.getenv("JDBC_DATABASE_URL");
-        if(dbUrl != null && dbUrl.length() > 0) {
+        if (dbUrl != null && dbUrl.length() > 0) {
             return DriverManager.getConnection(dbUrl);
         }
         return DriverManager.getConnection(database);
     }
-    /**
-     * Makes new database if old one doesn't exist.
-     */
+    
+    // Makes a new database if there isn't any
     public void init() {
         List<String> commands = this.sqliteCommands();
 
@@ -44,10 +40,8 @@ public class Database {
             System.out.println("Error >> " + t.getMessage());
         }
     }
-    /**
-     * Creates table if making new database;
-     * @return List that goes to database.
-     */
+    
+    // Creates a table and adds some data to it
     private List<String> sqliteCommands() {
         ArrayList<String> list = new ArrayList<>();
 

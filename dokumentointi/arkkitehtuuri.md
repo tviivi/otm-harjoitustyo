@@ -2,10 +2,10 @@
 
 ## Pakkausrakenne
 Sovelluksen koodin pakkausrakenne on seuraava:
-![alt text](kuvat/arkkitehtuuri3.png "Description goes here") <br />
+![alt text](kuvat/arkkitehtuuri4.png "Description goes here") <br />
 Pakkaus *Calculator* sisältää ohjelman sovelluslogiikan ja pakkaus *Graphic* taas graafisen käyttöliittymän. 
 Pakkauksessa *Database* on sovelluksen käyttämään tietokantaan ja sen käyttöön liittyvät luokat.
-Pakkauksen *Test* sisältä löytyy sovelluslogiikan kattavat testit.
+Pakkauksen *Test* sisältä löytyy sovelluslogiikan kattavat testit, sekä tietokantaan liittyviä testejä.
 
 ## Sovelluslogiikka
 Sovelluksen graafisen liittymän koostumista kuvaava sekvenssikaavio:

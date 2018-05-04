@@ -1,13 +1,10 @@
-package Database;
+package database;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * Pelaajan Tietokanta, joka tallettaa rahaa, nimen ja id:n.
- */
+// History database to store calculation history
 public class HistoryDao implements Dao<Operation, Integer> {
 
     private Database database;
@@ -15,26 +12,19 @@ public class HistoryDao implements Dao<Operation, Integer> {
     public HistoryDao(Database database) {
         this.database = database;
     }
-    /**
-     * Deletes HighScore from database with matching PRIMARY KEY.
-     * @param key
-     * @throws SQLException 
-     */
+    
+    // Deletes history from database with matching key
     public void delete(Integer key) throws SQLException {
         Connection conn = this.database.getConnection();
-        PreparedStatement stmt = conn.prepareStatement("DELETE FROM HighScores WHERE id = ?");
+        PreparedStatement stmt = conn.prepareStatement("DELETE FROM History WHERE id = ?");
 
         stmt.setInt(1, key);
         stmt.executeUpdate();
         stmt.close();
         conn.close();
     }
-    /**
-     * Saves HighScore to the database.
-     * @param highscore
-     * @return highscore
-     * @throws SQLException 
-     */
+    
+    // Saves history to the database
     private Operation save(Operation operation) throws SQLException {
 
         Connection conn = database.getConnection();
@@ -62,12 +52,8 @@ public class HistoryDao implements Dao<Operation, Integer> {
 
         return p;
     }
-    /**
-     * Updates HighScore in database with matching name and PRIMARY KEY.
-     * @param operation
-     * @return
-     * @throws SQLException 
-     */
+    
+    // Updates History in database
     private Operation update(Operation operation) throws SQLException {
         
         Connection conn = database.getConnection();
@@ -83,12 +69,8 @@ public class HistoryDao implements Dao<Operation, Integer> {
 
         return operation;
     }
-    /** 
-     * Uses private methods save() and update().
-     * @param operation
-     * @return highscore
-     * @throws SQLException 
-     */
+    
+    // Uses private methods save() and update()
     public Operation saveOrUpdate(Operation operation) throws SQLException {
         if ((Integer) operation.getId() == null) {
             return save(operation);
@@ -97,11 +79,8 @@ public class HistoryDao implements Dao<Operation, Integer> {
         }
 
     }
-    /**
-     * Returns list of highscores in database.
-     * @return List of highscores.
-     * @throws SQLException 
-     */
+    
+    // Returns list containing calculation history
     public List<Operation> findAll() throws SQLException {
         List<Operation> operations = new ArrayList<>();
         Connection connection = database.getConnection();
@@ -120,12 +99,8 @@ public class HistoryDao implements Dao<Operation, Integer> {
         connection.close();
         return operations;
     }
-    /**
-     * Finds and returns highscore with spesific PRIMARY KEY.
-     * @param key
-     * @return highscore
-     * @throws SQLException 
-     */
+    
+    // Finds and return history
     public Operation findOne(Integer key) throws SQLException {
 
         Connection conn = database.getConnection();
@@ -146,7 +121,5 @@ public class HistoryDao implements Dao<Operation, Integer> {
         conn.close();
 
         return operation;
-
     }
-
 }

@@ -1,17 +1,23 @@
 package Test;
-import Calculator.*;
+import calculator.Calculator;
+import database.Database;
+import database.HistoryDao;
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-public class MainTest {
+public class CalculatorTest {
 
     Calculator calculator;
+    Database database;
+    HistoryDao history;
     
     @Before
     public void setUp() {
         calculator = new Calculator();
         calculator.setMainvalue(0);
+        database = new Database("jdbc:sqlite:History.db");
+        history = new HistoryDao(database);
     }
 
     @Test
