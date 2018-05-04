@@ -4,6 +4,9 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * A database containing calculation history
+ */
 public class Database {
 
     private String database;
@@ -13,7 +16,9 @@ public class Database {
         this.init();
     }
     
-    // Gets connection to database
+    /**
+     * Gets connection to database
+     */
     public Connection getConnection() throws SQLException {
         String dbUrl = System.getenv("JDBC_DATABASE_URL");
         if (dbUrl != null && dbUrl.length() > 0) {
@@ -22,7 +27,9 @@ public class Database {
         return DriverManager.getConnection(database);
     }
     
-    // Makes a new database if there isn't any
+    /**
+     * Makes a new database if there isn't any
+     */
     public void init() {
         List<String> commands = this.sqliteCommands();
 
@@ -41,7 +48,9 @@ public class Database {
         }
     }
     
-    // Creates a table and adds some data to it
+    /**
+     * Creates a table and adds some data to it
+     */
     private List<String> sqliteCommands() {
         ArrayList<String> list = new ArrayList<>();
 

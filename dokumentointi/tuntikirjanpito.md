@@ -21,5 +21,6 @@
 | 2.5. | 1,5 | käyttöohje ja toiminnallisuutta kuvaava sekvenssikaavio |
 | 3.5. | 2 | tietokannan alustus, uusi pakkauskaavio |
 | 4.5. | 1 | tietokantaluokkien siivous, pakkauskaavion päivitys, lisää testejä |
+| 4.5. | 1 | Javadoc |
 
-## Yhteensä 24h
+## Yhteensä 25h

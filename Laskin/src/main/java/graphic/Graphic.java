@@ -25,6 +25,10 @@ public class Graphic extends Application {
     @Override
     public void start(Stage window) throws Exception {
 
+        /**
+         * Creates the needed TextFields and Labels
+         * @param window
+         */
         TextField current = new TextField();
         current.setPrefWidth(30);
         TextField summary = new TextField();
@@ -34,6 +38,9 @@ public class Graphic extends Application {
         Label text = new Label("Tervetuloa taskulaskin-sovellukseen! \n Aloita laskeminen painamalla jotain \n numeronäppäintä ja haluamaasi \n laskutoimitusnäppäintä. \n Jatka näitä vuoronperään.");
         Label history = new Label();
 
+        /**
+         * Creates the needed Buttons
+         */
         Button number1 = new Button("1");
         number1.setOnAction((event) -> {
             thenumber = thenumber * 10 + 1;
@@ -134,6 +141,9 @@ public class Graphic extends Application {
             history.setText("Nollasit tapahtumat");
         });
 
+        /** 
+         * Creates the HBoxes
+         */
         HBox historyBox = new HBox();
         HBox textBox = new HBox();
         HBox first = new HBox();
@@ -143,6 +153,7 @@ public class Graphic extends Application {
         HBox fifth = new HBox();
         HBox sixth = new HBox();
 
+        // Adds the created Buttons, Labels and TextFields to the HBoxes
         textBox.getChildren().addAll(text);
         first.getChildren().addAll(sum, number0, difference, summary);
         second.getChildren().addAll(number1, number2, number3, calculation);
@@ -152,15 +163,26 @@ public class Graphic extends Application {
         sixth.getChildren().addAll(getZero);
         historyBox.getChildren().addAll(history);
 
+        /**
+         * Adds the HBoxes to a VBox
+         */
         VBox finale = new VBox();
         finale.getChildren().addAll(textBox, fourth, third, second, first, fifth, sixth, historyBox);
 
         Scene buttons = new Scene(finale);
 
+        /**
+         * Creates the final scene
+         */
         window.setScene(buttons);
         window.show();
     }
 
+    /**
+     * For the database use. This method is used with every calculation-button.
+     * @param calculation
+     * @param summary
+     */
     public void databaseHelper(TextField calculation, TextField summary) {
         Operation operation = new Operation("" + calculation.getText() + summary.getText());
         try {
@@ -170,6 +192,12 @@ public class Graphic extends Application {
         }
     }
 
+    /**
+     * For the TextFeld use. This method is used with every number-button.
+     * @param calculation
+     * @param summary
+     * @param history
+     */
     public void textFieldHelper(TextField calculation, TextField summary, Label history) {
         thenumber = 0;
         summary.setText("=" + calculator.getMainvalue());

@@ -4,7 +4,6 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-// History database to store calculation history
 public class HistoryDao implements Dao<Operation, Integer> {
 
     private Database database;
@@ -13,7 +12,12 @@ public class HistoryDao implements Dao<Operation, Integer> {
         this.database = database;
     }
     
-    // Deletes history from database with matching key
+    /**
+     * Deletes history from database with matching key
+     * 
+     * @param key
+     * @throws SQLException
+     */
     public void delete(Integer key) throws SQLException {
         Connection conn = this.database.getConnection();
         PreparedStatement stmt = conn.prepareStatement("DELETE FROM History WHERE id = ?");
@@ -24,7 +28,13 @@ public class HistoryDao implements Dao<Operation, Integer> {
         conn.close();
     }
     
-    // Saves history to the database
+    /**
+     * Saves history to the database
+     * 
+     * @param operation
+     * @return
+     * @throws SQLException
+     */
     private Operation save(Operation operation) throws SQLException {
 
         Connection conn = database.getConnection();
@@ -53,7 +63,13 @@ public class HistoryDao implements Dao<Operation, Integer> {
         return p;
     }
     
-    // Updates History in database
+    /**
+     * Updates History in database
+     * 
+     * @param operation
+     * @return operation
+     * @throws SQLException
+     */
     private Operation update(Operation operation) throws SQLException {
         
         Connection conn = database.getConnection();
@@ -70,7 +86,12 @@ public class HistoryDao implements Dao<Operation, Integer> {
         return operation;
     }
     
-    // Uses private methods save() and update()
+    /** Uses private methods save() and update()
+     * 
+     * @param operation
+     * @return updated operation
+     * @throws SQLException 
+     */
     public Operation saveOrUpdate(Operation operation) throws SQLException {
         if ((Integer) operation.getId() == null) {
             return save(operation);
@@ -80,7 +101,11 @@ public class HistoryDao implements Dao<Operation, Integer> {
 
     }
     
-    // Returns list containing calculation history
+    /** Returns list containing calculation history
+     * 
+     * @return list of operations
+     * @throws SQLException 
+     */
     public List<Operation> findAll() throws SQLException {
         List<Operation> operations = new ArrayList<>();
         Connection connection = database.getConnection();
@@ -100,7 +125,12 @@ public class HistoryDao implements Dao<Operation, Integer> {
         return operations;
     }
     
-    // Finds and return history
+    /** Finds and return history
+     * 
+     * @param key
+     * @return operation
+     * @throws SQLException 
+     */
     public Operation findOne(Integer key) throws SQLException {
 
         Connection conn = database.getConnection();
