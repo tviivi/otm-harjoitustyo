@@ -35,7 +35,9 @@ public class Graphic extends Application {
         summary.setPrefWidth(50);
         TextField calculation = new TextField();
         calculation.setPrefWidth(50);
-        Label text = new Label("Tervetuloa taskulaskin-sovellukseen! \n Aloita laskeminen painamalla jotain \n numeronäppäintä ja haluamaasi \n laskutoimitusnäppäintä. \n Jatka näitä vuoronperään.");
+        Label text = new Label("Tervetuloa taskulaskin-sovellukseen! "
+                + "\n Aloita laskeminen painamalla jotain \n numeronäppäintä ja haluamaasi "
+                + "\n laskutoimitusnäppäintä. \n Jatka näitä vuoronperään.");
         Label history = new Label();
 
         /**
@@ -97,7 +99,7 @@ public class Graphic extends Application {
             calculator.sum(thenumber);
             calculation.setText(help + "+" + current.getText());
             textFieldHelper(calculation, summary, history);
-            databaseHelper(calculation, summary);
+            databaseHelper(calculation, summary, history);
         });
         Button difference = new Button("-");
         difference.setOnAction((event) -> {
@@ -105,7 +107,7 @@ public class Graphic extends Application {
             calculator.difference(thenumber);
             calculation.setText(help + "-" + current.getText());
             textFieldHelper(calculation, summary, history);
-            databaseHelper(calculation, summary);
+            databaseHelper(calculation, summary, history);
         });
         Button product = new Button("*");
         product.setOnAction((event) -> {
@@ -113,7 +115,7 @@ public class Graphic extends Application {
             calculator.product(thenumber);
             calculation.setText(help + "*" + current.getText());
             textFieldHelper(calculation, summary, history);
-            databaseHelper(calculation, summary);
+            databaseHelper(calculation, summary, history);
         });
         Button divide = new Button("/");
         divide.setOnAction((event) -> {
@@ -121,7 +123,7 @@ public class Graphic extends Application {
             calculator.divide(thenumber);
             calculation.setText(help + "/" + current.getText());
             textFieldHelper(calculation, summary, history);
-            databaseHelper(calculation, summary);
+            databaseHelper(calculation, summary, history);
         });
         Button power = new Button("^");
         power.setOnAction((event) -> {
@@ -129,7 +131,7 @@ public class Graphic extends Application {
             calculator.power(thenumber);
             calculation.setText(help + "^" + current.getText());
             textFieldHelper(calculation, summary, history);
-            databaseHelper(calculation, summary);
+            databaseHelper(calculation, summary, history);
         });
         Button getZero = new Button("Nollaa kaikki");
         getZero.setOnAction((event) -> {
@@ -182,11 +184,14 @@ public class Graphic extends Application {
      * For the database use. This method is used with every calculation-button.
      * @param calculation
      * @param summary
+     * @param history
      */
-    public void databaseHelper(TextField calculation, TextField summary) {
+    public void databaseHelper(TextField calculation, TextField summary, Label history) {
         Operation operation = new Operation("" + calculation.getText() + summary.getText());
         try {
             calculator.getHistory().saveOrUpdate(operation);
+            calculator.getHistory().findAll();
+            history.setText(calculator.getHistory().findAll().toString());
         } catch (SQLException ex) {
             Logger.getLogger(Graphic.class.getName()).log(Level.SEVERE, null, ex);
         }

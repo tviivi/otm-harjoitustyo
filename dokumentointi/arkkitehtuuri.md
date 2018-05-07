@@ -13,7 +13,6 @@ Sovelluksen graafisen liittymän koostumista kuvaava sekvenssikaavio:
 Ohjelma lähtee pyörimään, kun luokka *Main* kutsuu metodia *launch* luokalle *Graphic*. Tällöin *Graphic* lähtee rakentamaan
 käyttäliittymää luomalla erinäisiä käyttäliittymään tarvittavia elementtejä.
 
-
 Sovelluksen toiminnallisuutta kuvaava sekvenssikaavio:
 ![alt text](kuvat/klikkaussekvenssi.png "Description goes here") <br />
 Kaavion alussa käyttäjä klikkaa numeronappulaa 1. Tällöin *event* aktivoituu ja asettaa *TextField*in *current* tekstiksi kyseessä olevan numeron 1.
@@ -21,3 +20,8 @@ Seuraavaksi kaavion mukaan käyttäjä klikkaa nappia "+". Tämä saa aikaan uuden *e
 *Calculator*-luokan metodia *sum* parametrilla *thenumber*, mikä saa aikaan laskutoimituksen toteutumisen.
 Tämän jälkeen asetetaan *TextField*eille syötetty arvo, annettu laskutoimitus sekä sen tulos. Koko lauseke
 lisätään *history*-listalle, joka tulostetaan omalle *Label*illeen.
+
+## Tietojen pysyväistallennus
+Pakkauksen *database* luokat *database.Database* ja *database.HistoryDao* huolehtivat laskuhistorian tallentamisesta
+SQlite-tietokantaan. Sovellus tallettaa jokaisen käyttöliittymään syötetyn laskun tietokantaan peruslaskumuodossaan,
+esim. 22+3=25 tai 3^3=27.

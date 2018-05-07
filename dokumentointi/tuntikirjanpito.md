@@ -22,5 +22,6 @@
 | 3.5. | 2 | tietokannan alustus, uusi pakkauskaavio |
 | 4.5. | 1 | tietokantaluokkien siivous, pakkauskaavion p‰ivitys, lis‰‰ testej‰ |
 | 4.5. | 1 | Javadoc |
+| 7.5. | 2 | tietokantatestauksen opiskelua ja yritt‰mist‰ (tuloksetta) |
 
 ## Yhteens‰ 25h

@@ -10,14 +10,14 @@ public class CalculatorTest {
 
     Calculator calculator;
     Database database;
-    HistoryDao history;
+    HistoryDao historyDao;
     
     @Before
     public void setUp() {
         calculator = new Calculator();
         calculator.setMainvalue(0);
         database = new Database("jdbc:sqlite:History.db");
-        history = new HistoryDao(database);
+        historyDao = new HistoryDao(database);
     }
 
     @Test
