@@ -9,12 +9,12 @@ Pakkauksen *Test* sisältä löytyy sovelluslogiikan kattavat testit, sekä tietokan
 
 ## Sovelluslogiikka
 ### Sovelluksen päätoiminnallisuudet
-** Sovelluksen graafisen liittymän koostumista kuvaava sekvenssikaavio: **
+**Sovelluksen graafisen liittymän koostumista kuvaava sekvenssikaavio:**
 ![alt text](kuvat/aloitussekvenssi.png "Description goes here") <br />
 Ohjelma lähtee pyörimään, kun luokka *Main* kutsuu metodia *launch* luokalle *Graphic*. Tällöin *Graphic* lähtee rakentamaan
 käyttäliittymää luomalla erinäisiä käyttäliittymään tarvittavia elementtejä.
 
-** Sovelluksen toiminnallisuutta eli laskentaa kuvaava sekvenssikaavio: **
+**Sovelluksen toiminnallisuutta eli laskentaa kuvaava sekvenssikaavio:**
 ![alt text](kuvat/klikkaussekvenssi.png "Description goes here") <br />
 Kaavion alussa käyttäjä klikkaa numeronappulaa 1. Tällöin *event* aktivoituu ja asettaa *TextField*in *current* tekstiksi kyseessä olevan numeron 1.
 Seuraavaksi kaavion mukaan käyttäjä klikkaa nappia "+". Tämä saa aikaan uuden *event*in aktivoitumisen. Jo luodulle *Calculator*-oliolle kutsutaan

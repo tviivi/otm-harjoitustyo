@@ -2,7 +2,7 @@
 Sovellus on apuna jokapäiväisessä laskennassa. Sovellusta on helppo käyttää, joten se sopii kaikille numeroista jotain ymmärtäville.
 
 ## Käyttöliittymä
-Sovellus näyttää kaikessa yksinkertaisuudessaan seuraavalta:
+Sovellus näyttää kaikessa yksinkertaisuudessaan seuraavalta: <br />
 ![alt text](kuvat/aloitus2.png "Description goes here") <br />
 
 ## Perusversion toiminnallisuudet
