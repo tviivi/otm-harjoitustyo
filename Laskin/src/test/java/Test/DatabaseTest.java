@@ -42,35 +42,35 @@ public class DatabaseTest {
         assertEquals(operation.getId(), id);
     }
 
-//    void beforeEach() throws IOException, SQLException {
-//        Path path = Paths.get("jdbc:sqlite:TestDatabase.db");
-//        Files.delete(path);
-//
-//        List<String> commands = this.sqliteCommands();
-//        Connection connection = database.getConnection();
-//        Statement st = connection.createStatement();
-//
-//        for (String com : commands) {
-//            System.out.println("Running command >> " + com);
-//            st.executeUpdate(com);
-//        }
-//
-//        historyDao = new HistoryDao(database);
-//    }
-//
-//    private List<String> sqliteCommands() {
-//        ArrayList<String> list = new ArrayList<>();
-//
-//        list.add("CREATE TABLE TestDatabase ("
-//                + "id integer PRIMARY KEY, "
-//                + "operation varchar(50));");
-//
-//        return list;
-//    }
-//
-//    @Test
-//    public void testDatabaseWorks() throws SQLException {
-//        historyDao.saveOrUpdate(operation);
-//        assertEquals(historyDao.findAll(), operation);
-//    }
+    void beforeEach() throws IOException, SQLException {
+        Path path = Paths.get("jdbc:sqlite:TestDatabase.db");
+        Files.delete(path);
+
+        List<String> commands = this.sqliteCommands();
+        Connection connection = database.getConnection();
+        Statement st = connection.createStatement();
+
+        for (String com : commands) {
+            System.out.println("Running command >> " + com);
+            st.executeUpdate(com);
+        }
+
+        historyDao = new HistoryDao(database);
+    }
+
+    private List<String> sqliteCommands() {
+        ArrayList<String> list = new ArrayList<>();
+
+        list.add("CREATE TABLE TestDatabase ("
+                + "id integer PRIMARY KEY, "
+                + "operation varchar(50));");
+
+        return list;
+    }
+
+    @Test
+    public void testDatabaseWorks() throws SQLException {
+        historyDao.saveOrUpdate(operation);
+        assertEquals(historyDao.findAll(), operation);
+    }
 }

@@ -23,5 +23,6 @@
 | 4.5. | 1 | tietokantaluokkien siivous, pakkauskaavion p‰ivitys, lis‰‰ testej‰ |
 | 4.5. | 1 | Javadoc |
 | 7.5. | 2 | tietokantatestauksen opiskelua ja yritt‰mist‰ (tuloksetta) |
+| 9.5. | 1 | dokumentaatioviimeistely‰ |
 
-## Yhteens‰ 25h
+## Yhteens‰ 28h
