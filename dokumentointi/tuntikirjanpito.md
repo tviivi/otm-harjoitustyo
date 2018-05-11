@@ -25,5 +25,6 @@
 | 7.5. | 2 | tietokantatestauksen opiskelua ja yrittämistä (tuloksetta) |
 | 9.5. | 1 | dokumentaatioviimeistelyä |
 | 11.5. | 0,5 | tietokantatestaus-googlettelua |
+| 11.5. | 2 | testejä, dokumentointia, sovellus palautuskuntoon |
 
 ## Yhteensä 28h

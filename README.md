@@ -13,7 +13,7 @@ Referenssisovellus kurssille Ohjelmistotekniikan menetelmät 2018 kevät. Toteut
 ## Release
 Viikon 5 deadlinen mukainen release löytyy [täältä](https://github.com/tviivi/otm-harjoitustyo/releases/tag/viikko5) <br />
 Viikon 6 deadlinen mukainen release löytyy [täältä](https://github.com/tviivi/otm-harjoitustyo/releases/tag/viikko6) <br />
-Sovelluksen lopullinen release löytyy täältä
+Sovelluksen lopullinen release löytyy [täältä](https://github.com/tviivi/otm-harjoitustyo/releases/tag/Loppupalautus)
 
 ## Komentorivitoiminnot
 ### Testaus

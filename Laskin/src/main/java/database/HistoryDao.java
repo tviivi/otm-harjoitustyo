@@ -53,14 +53,14 @@ public class HistoryDao implements Dao<Operation, Integer> {
         ResultSet rs = stmt.executeQuery();
         rs.next();
 
-        Operation p = new Operation(rs.getString("operation"));
+        Operation o = new Operation(rs.getString("operation"));
 
         stmt.close();
         rs.close();
 
         conn.close();
 
-        return p;
+        return o;
     }
     
     /**
@@ -125,7 +125,7 @@ public class HistoryDao implements Dao<Operation, Integer> {
         return operations;
     }
     
-    /** Finds and return history
+    /** Finds and returns history
      * 
      * @param key
      * @return operation
@@ -151,5 +151,22 @@ public class HistoryDao implements Dao<Operation, Integer> {
         conn.close();
 
         return operation;
+    }
+    
+    /** Deletes table History from database
+     * 
+     * @throws SQLException 
+     */
+    public Operation dropTable() throws SQLException {
+        
+        Connection conn = database.getConnection();
+        PreparedStatement stmt = conn.prepareStatement("DROP TABLE History");
+
+        stmt.executeUpdate();
+
+        stmt.close();
+        conn.close();
+        
+        return new Operation("testi");
     }
 }
