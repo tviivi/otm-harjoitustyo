@@ -27,4 +27,4 @@
 | 11.5. | 0,5 | tietokantatestaus-googlettelua |
 | 11.5. | 2 | testejä, dokumentointia, sovellus palautuskuntoon |
 
-## Yhteensä 28h
+## Yhteensä 30,5h
