@@ -42,6 +42,7 @@ public class DatabaseTest {
         assertEquals(operation.getId(), id);
     }
 
+    @Before
     void beforeEach() throws IOException, SQLException {
         Path path = Paths.get("jdbc:sqlite:TestDatabase.db");
         Files.delete(path);
@@ -69,7 +70,7 @@ public class DatabaseTest {
     }
 
     @Test
-    public void testDatabaseWorks() throws SQLException {
+    public void testIfDatabaseWorks() throws SQLException {
         historyDao.saveOrUpdate(operation);
         assertEquals(historyDao.findAll(), operation);
     }

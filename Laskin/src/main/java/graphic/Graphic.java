@@ -192,6 +192,7 @@ public class Graphic extends Application {
             calculator.getHistory().saveOrUpdate(operation);
             calculator.getHistory().findAll();
             history.setText(calculator.getHistory().findAll().toString());
+            history.setText(historylist.toString());
         } catch (SQLException ex) {
             Logger.getLogger(Graphic.class.getName()).log(Level.SEVERE, null, ex);
         }

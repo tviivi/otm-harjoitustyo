@@ -12,7 +12,7 @@
 | 21.4. | 1 | sekvenssikaavio, README.md lyhyt kuvaus |
 | 21.4. | 1 | graafisen käyttöliittymän opiskelua |
 | 23.4. | 3 | graafisen käyttöliittymän raaka ensimmäinen versio |
-| 23.4. | 0,5 | uusi release, käyttöliittymän deadlinen mukainen vesio |
+| 23.4. | 0,5 | uusi release, käyttöliittymän deadlinen mukainen versio |
 | 23.4. | 1 | viikon 5 deadlinea varten viimeistelyä, uusi sekvenssikaavio |
 | 28.4. | 1 | koodikatselmointi |
 | 28.4. | 0,5 | kurssisivuilla surffailua, JavaFX-opiskelua (tuloksetta), koodin siistimistä |
@@ -24,5 +24,6 @@
 | 4.5. | 1 | Javadoc |
 | 7.5. | 2 | tietokantatestauksen opiskelua ja yrittämistä (tuloksetta) |
 | 9.5. | 1 | dokumentaatioviimeistelyä |
+| 11.5. | 0,5 | tietokantatestaus-googlettelua |
 
 ## Yhteensä 28h
